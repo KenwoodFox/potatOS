@@ -1,13 +1,19 @@
 void boot()
 {
-  Serial.println("If you did not trigger a reboot, this could be caused by an overdraw,");
+  Serial.println("The PLC has restarted, if you did not trigger this restart, a power surge may have caused it to reboot.");
   delay(2000);
-  Serial.print("Starting potatOS by joe:");
-  while(i > 20)
+  Serial.println("Starting potatOS by Joe, Version PRE ALPHA");
+  delay(10);
+  Serial.print("Loading ");
+  while(i < 20)
   {
     Serial.print("=");
+    delay(300);
     i++;
   }
-  Serial.println("Finished loading.");
+  delay(10);
+  Serial.println(" Finished loading.");
+  delay(1500);
+  Serial.println("Controler online");
 }
 
