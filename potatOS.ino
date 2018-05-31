@@ -25,6 +25,12 @@ void setup() {
   delay(10);
   // reserve 200 bytes for the imput
   imput.reserve(200);
+  while(Serial.available() == 0)
+  {
+    delay(10);
+    //Do nothing untill imput is applied
+  }
+  delay(10);
   boot();
 
 }
