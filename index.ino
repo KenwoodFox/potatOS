@@ -8,7 +8,7 @@ void index()
 
   //commands
   //operation a
-  if (imput == 'lift')
+  if (imput == "lift")
   {
     Serial.println("exc operation lift");
     operation_lift(0);
@@ -25,7 +25,7 @@ void index()
   }
 
   //operation b
-  if (imput == 'vent')
+  if (imput == "vent")
   {
     Serial.println("exc operation vent");
     operation_vent(0); //replace with option
@@ -42,12 +42,13 @@ void index()
   }
 
   //End Index
-    if ((imput == 'lift') || (imput == 'vent') || (imput == 'water')) 
+    if ((imput == "lift") || (imput == "vent") || (imput == "water")) 
     { //Secondary index to display the error message below
       delay(2);
     }
     else
     {
+      imput = "";
       Serial.println("That is not a command or it has not been added to my index yet.");
     }
     imput = "";

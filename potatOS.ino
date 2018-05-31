@@ -1,4 +1,4 @@
-#include <dht.h>
+//#include <dht.h>
 
 //Operation specific variables
 //Operation lift
@@ -7,9 +7,9 @@ int LIFTLIMIT = false; //the state of the pin that signals when the lift is at o
 int LIFTTIMEOUT = 0; //the time the motor will run before the system stops trying to lift
 int LIFTREAD = 500; //every so many ms read the state of the limit
 //Operation vent
-boolean VENTCOMPLETE = false;
+boolean VENTCOMPLETE = false; //Signify that the operation is complete 
 //Operation water
-boolean WATERCOMPLETE = false;
+boolean WATERCOMPLETE = false; //Signify that the operation is complete
 //End Operation specific variables
 
 //Other variables here
@@ -30,6 +30,7 @@ void setup() {
     delay(10);
     //Do nothing untill imput is applied
   }
+  imput = "";
   delay(10);
   boot();
 

@@ -3,7 +3,7 @@ void operation_lift(int LIFTSTATE)
   if(LIFTSTATE == 1)
   {
     //go up
-    //toggle pin forward
+    //on relay
     while(LIFTLIMIT != true && LIFTTIMEOUT < 20)
     {
     delay(LIFTREAD);
@@ -14,7 +14,7 @@ void operation_lift(int LIFTSTATE)
   else
   {
     //go down
-    //toggle pin down
+    //off relay
      while(LIFTLIMIT != true && LIFTTIMEOUT < 20)
      {
     delay(LIFTREAD);
