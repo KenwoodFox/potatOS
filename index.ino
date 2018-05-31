@@ -8,12 +8,12 @@ void index()
 
   //commands
   //operation a
-  if (imput == 'a')
+  if (imput == 'lift')
   {
-    Serial.println("doing a");
-    operation_a();
+    Serial.println("exc operation lift");
+    operation_lift(0);
     
-    if (a == true)
+    if (LIFTCOMPLETE == true)
     {
       Serial.println("Operation complete");
     }
@@ -21,15 +21,16 @@ void index()
     {
       Serial.println("Operation not completed!");
     }
+    LIFTCOMPLETE = false;
   }
 
   //operation b
-  if (imput == 'b')
+  if (imput == 'vent')
   {
-    Serial.println("doing b");
-    operation_b();
+    Serial.println("exc operation vent");
+    operation_vent(0); //replace with option
     
-    if (b == true)
+    if (VENTCOMPLETE == true)
     {
       Serial.println("Operation complete");
     }
@@ -37,10 +38,11 @@ void index()
     {
       Serial.println("Operation not completed!");
     }
+    VENTCOMPLETE = false;
   }
 
   //End Index
-    if ((imput == 'a') || (imput == 'b')) 
+    if ((imput == 'lift') || (imput == 'vent') || (imput == 'water')) 
     { //Secondary index to display the error message below
       delay(2);
     }
@@ -48,5 +50,5 @@ void index()
     {
       Serial.println("That is not a command or it has not been added to my index yet.");
     }
+    imput = "";
 }
-
